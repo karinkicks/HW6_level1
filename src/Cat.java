@@ -1,8 +1,13 @@
 
 public class Cat extends Animal{
+
+    public Cat(double distance){
+        super(distance);
+    }
+
     @Override
-    protected void run(double length) {
-        if(length>=0 && length<=200){
+    public void run() {
+        if(distance>=0 && distance<=200){
             System.out.println("run: true");
         }else{
             System.out.println("run: false");
@@ -10,8 +15,8 @@ public class Cat extends Animal{
     }
 
     @Override
-    protected void jump(double height) {
-        if (height >= 0 && height <= 2) {
+    public void jump() {
+        if (distance >= 0 && distance <= 2) {
             System.out.println("jump: true");
         } else {
             System.out.println("jump: false");
@@ -19,13 +24,13 @@ public class Cat extends Animal{
     }
 
     @Override
-    protected void swim(double length) {
+    public void swim() {
         System.out.println("swim: false");
     }
 
     @Override
-    protected void runManually(double length, double limit) {
-        if(length>=0 && length<=limit){
+    public void runManually(double limit) {
+        if(distance>=0 && distance<=limit){
             System.out.println("run: true");
         }else{
             System.out.println("run: false");
@@ -33,13 +38,13 @@ public class Cat extends Animal{
     }
 
     @Override
-    protected void swimManually(double length, double limit) {
+    public void swimManually(double limit) {
         System.out.println("swim: false");
     }
 
     @Override
-    protected void jumpManually(double height, double limit) {
-        if (height >= 0 && height <= limit) {
+    public void jumpManually(double limit) {
+        if (distance >= 0 && distance <= limit) {
             System.out.println("jump: true");
         } else {
             System.out.println("jump: false");

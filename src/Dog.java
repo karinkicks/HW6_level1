@@ -1,16 +1,21 @@
 
 public class Dog extends Animal{
+
+    public Dog(double distance){
+        super(distance);
+    }
+
     @Override
-    protected void run(double length) {
-        if(length>=0 && length<=500){
+    public void run() {
+        if(distance>=0 && distance<=500){
             System.out.println("run: true");
         }else{
             System.out.println("run: false");
         }
     }
     @Override
-    protected void jump(double height) {
-        if (height >= 0 && height <= 0.5) {
+    public void jump() {
+        if (distance >= 0 && distance <= 0.5) {
             System.out.println("jump: true");
         } else {
             System.out.println("jump: false");
@@ -18,8 +23,8 @@ public class Dog extends Animal{
     }
 
     @Override
-    protected void swim(double length) {
-        if (length >= 0 && length <= 10) {
+    public void swim() {
+        if (distance >= 0 && distance <= 10) {
             System.out.println("jump: true");
         } else {
             System.out.println("jump: false");
@@ -27,8 +32,8 @@ public class Dog extends Animal{
     }
 
     @Override
-    protected void runManually(double length, double limit) {
-        if(length>=0 && length<=limit){
+    public void runManually(double limit) {
+        if(distance>=0 && distance<=limit){
             System.out.println("run: true");
         }else{
             System.out.println("run: false");
@@ -36,8 +41,8 @@ public class Dog extends Animal{
     }
 
     @Override
-    protected void swimManually(double length, double limit) {
-        if (length >= 0 && length <= limit) {
+    public void swimManually(double limit) {
+        if (distance >= 0 && distance <= limit) {
             System.out.println("jump: true");
         } else {
             System.out.println("jump: false");
@@ -45,8 +50,8 @@ public class Dog extends Animal{
     }
 
     @Override
-    protected void jumpManually(double height, double limit) {
-        if (height >= 0 && height <= limit) {
+    public void jumpManually(double limit) {
+        if (distance >= 0 && distance <= limit) {
             System.out.println("jump: true");
         } else {
             System.out.println("jump: false");

@@ -1,27 +1,22 @@
 
-public class Animal {
+public abstract class Animal {
+    protected double distance;
 
-protected void run(double length){
-    System.out.println("run " + length);
-}
 
-protected void swim(double length) {
-    System.out.println("swim " + length);
-}
-
-protected void jump(double height){
-    System.out.println("jump " + height);
-}
-
-    protected void runManually(double length, double limit){
-        System.out.println("run " + length);
+    public Animal(double distance) {
+        this.distance=distance;
     }
 
-    protected void swimManually(double length, double limit) {
-        System.out.println("swim " + length);
-    }
+    public abstract void run();
 
-    protected void jumpManually(double height, double limit){
-        System.out.println("jump " + height);
-    }
+    public abstract void swim();
+
+    public abstract void jump();
+
+    public abstract void runManually(double limit);
+
+    public abstract void swimManually(double limit);
+
+    public abstract void jumpManually(double limit);
+
 }
